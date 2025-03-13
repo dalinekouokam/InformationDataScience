@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="{{url_for('traitement1')}}" method="POST" required>
+        <br>
+       <label for="name">Nom </label>
+            <input type="text" name="nom" minlength="4" maxlength="50" placehoder="Kouokam" required/>
+            <br>
+            <label for="name">Prenom:</label>
+            <input type="text" name="prenom" minlength="4" maxlength="50" placehoder="Kouokam" required/>
+        <br>
+        <label>Adress Email:</label>
+        <input type="Email" name="Email" minlength="4" maxlength="20" required/>
+        <br>
+        <label>date de naissance:</label>
+                <input type="date" name="date" required/>
+        <br>
+        <label>sexe:</label>
+            <input type="radio" name="sexe">Femme
+            <input type="radio" name="sexe">Homme
+        <br><br> <!--<br> permert de séparer les ligne-->
+        <ol>
+         <li><label>Quel est votre niveau d'études actuel?</label>
+            <br>
+            <input type="radio" name="Etude">Bac
+            <br>
+            <input type="radio" name="Etude">Bac +1 à Bac +2
+            <br>
+            <input type="radio" name="Etude">Bac+3(Licence) 
+            <br>
+            <input type="radio" name="Etude">Bac+5(Master)
+            <br>
+            <input name="Etude" type="radio" value="autre">Autre.Présisez:
+            <textarea name="Etude"  rows="1" cols="20"></textarea></li>
+        <br>
+         <li><label>Quelle est votre filiére ou spécialité?</label>
+            <br>
+            <input type="radio" name="filiére">Informatique
+            <br>
+            <input type="radio" name="filiére">Mathématiques / Statistiques
+            <br>
+            <input type="radio" name="filiére">Economie
+            <br>
+            <input type="radio" name="filiére">Science Ingénieur
+            <br>
+            <input name="filiére" type="radio" value="autre">Autre.Présisez:
+            <textarea name="filiére"  rows="1" cols="20"></textarea></li>
+        <br>
+         <li><label>Comment avez-vous découvert la data science?</label>
+        <br>
+        <input type="radio" name="découvert">Réseaux sociaux 
+        <br>
+        <input type="radio" name="découvert">Cours / Formation
+        <br>
+        <input type="radio" name="découvert">Récommandation d'un proche
+        <br>
+        <input name="découvert" type="radio" value="autre">Autre.Présisez:
+        <textarea name="découvert"  rows="1" cols="20"></textarea></li>
+    <br>
+      <li><label>Pourquoi vous intéressez vous à la data science?</label>
+        <br>
+         <input name="sicence" type="checkbox">Opportinités de carriére
+         <br>
+         <input name="sicence" type="checkbox">Innovation et nouvelles technologies
+         <br>
+          <input name="sicence" type="checkbox">Manipulation de données massives
+          <br>
+          <input name="sicence" type="checkbox">Intelligence Artificielle
+          <br>
+          <input name="sicence" type= "checkbox" value="autre">Autre.Présisez:
+          <br>
+          <textarea name="sicence"  rows="1" cols="20"></textarea></li></li>
+    <br>
+     <li><label>Quels langages de programmation connaissez vous?</label>
+        <br>
+        <input name="language" type="checkbox">python
+        <br>
+        <input name="language" type="checkbox">R
+        <br>
+        <input name="language" type="checkbox">SQL
+        <br>
+        <input name="language" type="checkbox">Java
+        <br>
+        <input name="language"type= "checkbox" value="autre">Autre.Présisez:
+        <textarea name="language"  rows="1" cols="20"></textarea></li>
+    </ol>
+    <br>
+    <button>Envoyer</button>
+    <br>
+    </form>  
+    {% endblock %}

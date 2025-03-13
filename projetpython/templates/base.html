@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation en Data Science</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+</head>
+<body>
+    <nav id="nbar">
+        <img width="100px"height="100px" src="https://ecolecoreenne76.fr/wp-content/uploads/2018/07/thumb.jpg" alt="Etude" />
+        <ul id="nbar1">
+            <li class ="nbar2" >
+                <a  href="{{url_for('index')}}">Accuiel</a>
+            </li>
+            <li class ="nbar3" >
+                <a   href="{{url_for('formulaire')}}">Sondage</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="container">
+       {% block content %}{% endblock %}
+    </div> 
+<footer>
+    <p id="p1">@copywright Groupe6 DSIM 2025</p>
+</footer>
+</body>
+</html>
